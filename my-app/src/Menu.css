@@ -1,0 +1,69 @@
+/* Basic menu bar styling */
+.menu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transform: translateX(-100%);
+    /* Start off-screen */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+    opacity: 0;
+    z-index: 10;
+    /* Hidden by default */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-bar.open {
+    transform: translateX(0);
+    /* Slide in when open */
+    opacity: 1;
+    /* Visible */
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-bar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+    font-size: 18px;
+}
+
+/* Smooth transition on the button as well */
+.menu-btn:hover {
+    background-color: #444;
+}
+
+/* Fading transition */
+.menu-bar {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.menu-bar.open {
+    opacity: 1;
+    visibility: visible;
+}
