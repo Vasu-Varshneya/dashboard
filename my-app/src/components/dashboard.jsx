@@ -10,7 +10,7 @@ import { CiLocationArrow1 } from "react-icons/ci"
 import * as d3 from "d3";
 import { useState, useEffect,useRef} from 'react'
 import gsap from 'gsap';
-const dashboard = () => {
+const Dashboard = () => {
   const [number, setNumber] = useState('10');
   const headingRef = useRef(null);
   useEffect(() => {
@@ -90,4 +90,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default Dashboard
