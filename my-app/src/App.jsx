@@ -8,7 +8,6 @@ import Mydashboard from './components/mydashboard';
 import { AuthProvider } from './components/AuthContext';
 import ProtectedRoute from './components/Protected';
 function App() {
-  const isLoggedIn = localStorage.getItem('isLoggedIn');
   return (
     <AuthProvider>
       <Router> {/* Wrap your entire app inside BrowserRouter */}
@@ -17,7 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/mydashboard" element={<Mydashboard />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={isLoggedIn?<Dashboard />:" "} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </AuthProvider>
